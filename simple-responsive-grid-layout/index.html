@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Landing Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to your CSS file -->
+    <style>
+      /* External CSS file (styles.css) */
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center; /* Horizontally center content */
+        align-items: center; /* Vertically center content */
+        height: 100vh; /* Full viewport height */
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3-column grid on desktop */
+        gap: 20px;
+        padding: 20px;
+        max-width: 1200px; /* Example max width */
+        width: 100%;
+      }
+
+      .item {
+        background-color: #f0f0f0;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .item img {
+        max-width: 100%; /* Ensure images shrink proportionally */
+        height: auto; /* Maintain aspect ratio */
+        max-height: 100%; /* Ensure images do not exceed item height */
+      }
+
+      .big-item {
+        grid-column: span 3; /* Span 3 columns on desktop */
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          grid-template-columns: repeat(3, 1fr); /* 3-column grid on mobile */
+        }
+        .big-item {
+          grid-column: span 3; /* Span 3 columns on mobile */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item big-item">
+        <img src="big-picture.jpg" alt="Big Picture" />
+      </div>
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+    </div>
+  </body>
+</html>
